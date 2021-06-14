@@ -1,7 +1,8 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 // importando os componentes criados
-import SafeEnvironment from 'ui/components/feedback/SafeEnvironment/SafeEnvironment';
+import SafeEnvironment from "ui/components/feedback/SafeEnvironment/SafeEnvironment";
+import PageTitle from "ui/components/data-display/PageTitle/PageTitle";
 
 export default function Home() {
   return (
@@ -9,7 +10,13 @@ export default function Home() {
       {/* INSERINDO COMPONENTE SafeEnvironment */}
       <SafeEnvironment />
 
-      
+      {/* INSERINDO COMPONENTE PageTitle */}
+      <PageTitle
+        title={"Conheça os profissionais"}
+        subtitle={
+          "Preencha seu endereço e veja os profissionais da sua localidade"
+        }
+      />
     </div>
-  )
+  );
 }
