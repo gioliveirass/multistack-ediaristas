@@ -12,9 +12,13 @@
 
 ## <a id="projeto"> 💻 Projeto </a>
 
-> Em breve...
+E-diaristas é uma plataforma que te ajuda a encontrar o melhor profissional de limpeza domiciliar com total segurança e praticidade. O projeto foi desenvolvido durante o evento Multistack, promovido pela [Treina Web](https://www.treinaweb.com.br/).
+
+> 📌 Status do projeto: Em desenvolvimento.
 
 ## <a id="tecnologias"> 🧪 Tecnologias </a>
+
+As seguintes tecnologias foram utilizadas neste projeto:
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=next-dot-js&logoColor=white)
