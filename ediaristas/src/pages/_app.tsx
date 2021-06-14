@@ -2,7 +2,9 @@
 
 import "@styles/globals.css"; // importando estilização global
 import Head from "next/head"; // permite editar o head, a cabeça do html
-import Header from "ui/components/surfaces/Header/Header" // importando o componente criado Header
+import Header from "ui/components/surfaces/Header/Header"; // importando o componente criado Header
+import Footer from "ui/components/surfaces/Footer/Footer"; // importando o componente criado Footer
+import { AppContainer } from "ui/styles/pages/_app.style"; // container para fixar o footer no pé da página
 
 // importações para adicionar o tema
 // o ThemeProvider passa a propriedade do tema para todos os elementos que estiverem dentro dele
@@ -19,12 +21,15 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet"
         />
-        <link href="/fonts/tw-icons/css/treinaweb-icons.css" rel="stylesheet" />  
+        <link href="/fonts/tw-icons/css/treinaweb-icons.css" rel="stylesheet" />
       </Head>
 
       <ThemeProvider theme={theme}>
-        <Header />
-        <Component {...pageProps} />
+        <AppContainer>
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </AppContainer>
       </ThemeProvider>
     </>
   );
