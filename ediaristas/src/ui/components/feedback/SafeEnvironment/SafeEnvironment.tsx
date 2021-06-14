@@ -10,7 +10,7 @@ const SafeEnvironment = () => {
     return (
         <SafeEnvironmentContainer>
             <Container> {/* Componente do framework, define um valor de largura fixo */}
-                Ambiente Seguro
+                Ambiente 100% Seguro <i className={'twf-lock'} />
             </Container>
         </SafeEnvironmentContainer>
     );
