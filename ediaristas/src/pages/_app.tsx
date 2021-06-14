@@ -2,6 +2,7 @@
 
 import "@styles/globals.css"; // importando estilização global
 import Head from "next/head"; // permite editar o head, a cabeça do html
+import Header from "ui/components/surfaces/Header/Header" // importando o componente criado Header
 
 // importações para adicionar o tema
 // o ThemeProvider passa a propriedade do tema para todos os elementos que estiverem dentro dele
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <ThemeProvider theme={theme}>
+        <Header />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
