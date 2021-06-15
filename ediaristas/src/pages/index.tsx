@@ -4,6 +4,15 @@ import PageTitle from "ui/components/data-display/PageTitle/PageTitle";
 import UserInformation from "ui/components/data-display/UserInformation/UserInformation";
 import TextFieldMask from "ui/components/inputs/TextFieldMask/TextFieldMask";
 
+import {
+  FormElementsContainer,
+  ProfissionaisPaper,
+  ProfissionaisContainer,
+} from "ui/styles/pages/index.style";
+
+// importando componentes do material-ui
+import { Button, Typography, Container } from "@material-ui/core";
+
 export default function Home() {
   return (
     <div>
@@ -18,21 +27,80 @@ export default function Home() {
         }
       />
 
-      {/* INSERINDO COMPONENTE TextField */}
-      <TextFieldMask
-        mask={"99.999-999"}
-        label={"Digite seu CEP"}
-        fullWidth
-        variant={"outlined"}
-      />
+      {/* INSERINDO COMPONENTE Container */}
+      <Container>
+        {/* INSERINDO COMPONENTE FormElementsContainer */}
+        <FormElementsContainer>
+          {/* INSERINDO COMPONENTE TextField */}
+          <TextFieldMask
+            mask={"99.999-999"}
+            label={"Digite seu CEP"}
+            fullWidth
+            variant={"outlined"}
+          />
 
-      {/* INSERINDO COMPONENTE UserInformation */}
-      <UserInformation
-        name={"Giovana"}
-        picture={"https://github.com/gioliveirass.png"}
-        rating={3}
-        description={"São Paulo"}
-      />
+          {/* INSERINDO COMPONENTE Typography */}
+          <Typography color={"error"}>CEP Inválido</Typography>
+
+          {/* INSERINDO COMPONENTE Button */}
+          <Button
+            variant={"contained"}
+            color={"secondary"}
+            sx={{ width: "220px" }}
+          >
+            Buscar
+          </Button>
+        </FormElementsContainer>
+
+        {/* INSERINDO COMPONENTE ProfissionaisPaper */}
+        <ProfissionaisPaper>
+          {/* INSERINDO COMPONENTE ProfissionaisContainer */}
+          <ProfissionaisContainer>
+            {/* INSERINDO COMPONENTE UserInformation */}
+            <UserInformation
+              name={"Giovana"}
+              picture={"https://github.com/gioliveirass.png"}
+              rating={3}
+              description={"São Paulo"}
+            />
+
+            <UserInformation
+              name={"Giovana"}
+              picture={"https://github.com/gioliveirass.png"}
+              rating={3}
+              description={"São Paulo"}
+            />
+
+            <UserInformation
+              name={"Giovana"}
+              picture={"https://github.com/gioliveirass.png"}
+              rating={3}
+              description={"São Paulo"}
+            />
+
+            <UserInformation
+              name={"Giovana"}
+              picture={"https://github.com/gioliveirass.png"}
+              rating={3}
+              description={"São Paulo"}
+            />
+
+            <UserInformation
+              name={"Giovana"}
+              picture={"https://github.com/gioliveirass.png"}
+              rating={3}
+              description={"São Paulo"}
+            />
+
+            <UserInformation
+              name={"Giovana"}
+              picture={"https://github.com/gioliveirass.png"}
+              rating={3}
+              description={"São Paulo"}
+            />
+          </ProfissionaisContainer>
+        </ProfissionaisPaper>
+      </Container>
     </div>
   );
 }
