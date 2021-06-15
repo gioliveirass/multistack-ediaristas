@@ -13,7 +13,13 @@ import {
 // importando componentes do material-ui
 import { Button, Typography, Container } from "@material-ui/core";
 
+// importando hooks
+import useIndex from "data/hooks/pages/UseIndex.page";
+
 export default function Home() {
+  // recebendo valores dos hooks
+  const { cep, setCep, cepValido } = useIndex();
+
   return (
     <div>
       {/* INSERINDO COMPONENTE SafeEnvironment */}
@@ -37,6 +43,8 @@ export default function Home() {
             label={"Digite seu CEP"}
             fullWidth
             variant={"outlined"}
+            value={cep}
+            onChange={(event) => setCep(event.target.value)}
           />
 
           {/* INSERINDO COMPONENTE Typography */}
