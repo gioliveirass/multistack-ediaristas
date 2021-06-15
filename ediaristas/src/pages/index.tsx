@@ -11,14 +11,29 @@ import {
 } from "ui/styles/pages/index.style";
 
 // importando componentes do material-ui
-import { Button, Typography, Container } from "@material-ui/core";
+import {
+  Button,
+  Typography,
+  Container,
+  CircularProgress,
+} from "@material-ui/core";
 
 // importando hooks
 import useIndex from "data/hooks/pages/UseIndex.page";
 
 export default function Home() {
   // recebendo valores dos hooks
-  const { cep, setCep, cepValido } = useIndex();
+  const {
+    cep,
+    setCep,
+    cepValido,
+    buscarProfissionais,
+    erro,
+    diaristas,
+    buscaFeita,
+    carregando,
+    diaristasRestantes,
+  } = useIndex();
 
   return (
     <div>
@@ -47,67 +62,64 @@ export default function Home() {
             onChange={(event) => setCep(event.target.value)}
           />
 
-          {/* INSERINDO COMPONENTE Typography */}
-          <Typography color={"error"}>CEP Inválido</Typography>
+          {/* INSERINDO COMPONENTE Typography CASO TENHA ALGUM ERRO */}
+          {erro && <Typography color={"error"}>{erro}</Typography>}
 
           {/* INSERINDO COMPONENTE Button */}
           <Button
             variant={"contained"}
             color={"secondary"}
             sx={{ width: "220px" }}
+            disabled={!cepValido || carregando}
+            onClick={() => buscarProfissionais(cep)}
           >
-            Buscar
+            {/* se estiver carregando, exibe a barra de carregamento, senão exibe a string 'Buscar' */}
+            {carregando ? <CircularProgress size={20} /> : "Buscar"}
           </Button>
         </FormElementsContainer>
 
-        {/* INSERINDO COMPONENTE ProfissionaisPaper */}
-        <ProfissionaisPaper>
-          {/* INSERINDO COMPONENTE ProfissionaisContainer */}
-          <ProfissionaisContainer>
-            {/* INSERINDO COMPONENTE UserInformation */}
-            <UserInformation
-              name={"Giovana"}
-              picture={"https://github.com/gioliveirass.png"}
-              rating={3}
-              description={"São Paulo"}
-            />
+        {buscaFeita &&
+          (diaristas.length > 0 ? (
+            <ProfissionaisPaper>
+              <ProfissionaisContainer>
+                {diaristas.map((item, index) => {
+                  return (
+                    <UserInformation
+                      key={index}
+                      name={item.nome_completo}
+                      picture={item.foto_usuario}
+                      rating={item.reputacao}
+                      description={item.cidade}
+                    />
+                  );
+                })}
+              </ProfissionaisContainer>
 
-            <UserInformation
-              name={"Giovana"}
-              picture={"https://github.com/gioliveirass.png"}
-              rating={3}
-              description={"São Paulo"}
-            />
+              <Container sx={{ textAlign: "center" }}>
+                {diaristasRestantes > 0 && (
+                  <Typography sx={{ mt: 5 }}>
+                    ... E mais {diaristasRestantes}{" "}
+                    {diaristasRestantes > 1
+                      ? "profissionais atendem"
+                      : "profissional atende"}{" "}
+                    ao seu endereço.
+                  </Typography>
+                )}
 
-            <UserInformation
-              name={"Giovana"}
-              picture={"https://github.com/gioliveirass.png"}
-              rating={3}
-              description={"São Paulo"}
-            />
-
-            <UserInformation
-              name={"Giovana"}
-              picture={"https://github.com/gioliveirass.png"}
-              rating={3}
-              description={"São Paulo"}
-            />
-
-            <UserInformation
-              name={"Giovana"}
-              picture={"https://github.com/gioliveirass.png"}
-              rating={3}
-              description={"São Paulo"}
-            />
-
-            <UserInformation
-              name={"Giovana"}
-              picture={"https://github.com/gioliveirass.png"}
-              rating={3}
-              description={"São Paulo"}
-            />
-          </ProfissionaisContainer>
-        </ProfissionaisPaper>
+                <Button
+                  variant={"contained"}
+                  color={"secondary"}
+                  sx={{ mt: 5 }}
+                >
+                  Contratar um profissional
+                </Button>
+              </Container>
+            </ProfissionaisPaper>
+          ) : (
+            <Typography align={"center"} color={"textPrimary"}>
+              Ainda não temos nenhuma diarista disponível em sua região.
+            </Typography>
+          ))}
       </Container>
     </div>
   );

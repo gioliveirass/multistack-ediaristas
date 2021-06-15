@@ -4,12 +4,12 @@
 
 // importando o useState e useMemo usado para fazer o hook
 import { useState, useMemo } from "react";
-
 // importando interface (tipagem)
 import { UserShortInterface } from "data/@types/userInterface";
-
 // importando serviços de validação
 import { ValidationService } from "data/services/ValidationService";
+// importando configurações feitas para usar o axios
+import { ApiService } from "data/services/ApiService";
 
 // criando a função que é o nosso hook
 export default function useIndex() {
@@ -24,5 +24,40 @@ export default function useIndex() {
     [diaristas, setDiaristas] = useState([] as UserShortInterface[]),
     [diaristasRestantes, setDiaristasRestantes] = useState(0);
 
-  return { cep, setCep, cepValido };
+  // função para fazer a busca de profissionais
+  async function buscarProfissionais(cep: string) {
+    setBuscaFeita(false);
+    setCarregando(true);
+    setErro("");
+
+    try {
+      // só irá executar as próximas linhas quando tiver uma resposta dessa função
+      const { data } = await ApiService.get<{
+        // adicionando tipagem do que se espera do json
+        diaristas: UserShortInterface[];
+        quantidade_diaristas: number;
+      }>("/api/diaristas-cidade?cep=" + cep.replace(/\D/g, ""));
+
+      // adicionando os novos valores
+      setDiaristas(data.diaristas);
+      setDiaristasRestantes(data.quantidade_diaristas);
+      setBuscaFeita(true);
+      setCarregando(false);
+    } catch (error) {
+      setErro("CEP não encontrado");
+      setCarregando(false);
+    }
+  }
+
+  return {
+    cep,
+    setCep,
+    cepValido,
+    buscarProfissionais,
+    erro,
+    diaristas,
+    buscaFeita,
+    carregando,
+    diaristasRestantes,
+  };
 }
