@@ -38,13 +38,13 @@ Para que o projeto funcione em sua máquina, você precisa ter instalado o [Node
 Se já tiver feito as instalações necessárias, vamos começar clonando o repositório e abrindo a pasta na sua máquina:
 
 ```
-$ git clone https://github.com/gioliveirass/multistack-ediaristas.git && cd multistack-ediaristas
+git clone https://github.com/gioliveirass/multistack-ediaristas.git && cd multistack-ediaristas
 ```
 
 Agora que já está com a pasta do projeto clonada e aberta no seu terminal, você pode seguir os seguintes guias para rodar a Plataforma E-Diaristas ou o Painel Administrativo:
 
-- [Rodando a plataforma E-Diaristas](#)
-- [Rodando o Painel Administrativo](#)
+- [Rodando a plataforma E-Diaristas](https://github.com/gioliveirass/multistack-ediaristas/blob/main/ediaristas/README.md)
+- [Rodando o Painel Administrativo](https://github.com/gioliveirass/multistack-ediaristas/blob/main/django/README.md)
 
 ## <a id="licença"> 📝 Licença </a>
 
