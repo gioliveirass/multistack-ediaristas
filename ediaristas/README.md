@@ -1,7 +1,6 @@
 ## 🚀 Rodando a plataforma E-diaristas
 
-Antes de rodar os executar os comando abaixo, certifique-se de que você está com a pasta /multistack-ediaristas aberta no terminal.
-
+Antes de executar os comandos abaixo, certifique-se de que você está com a pasta /multistack-ediaristas aberta no terminal.
 
 ```
 # Entre na pasta /ediaristas:
