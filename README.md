@@ -12,7 +12,7 @@
 
 ## <a id="projeto"> 💻 Sobre o projeto </a>
 
-O projeto foi desenvolvido durante o evento "Semana Multi Stack", promovido pela [Treina Web](https://www.treinaweb.com.br/), e conta com uma plataforma chamada E-diaristas que te ajuda a encontrar o melhor profissional de limpeza domiciliar com total segurança e praticidade. E, através do Painel Administrativo, ainda é possível cadastrar novos profissionais e alterar e deletar seus dados.
+Desenvolvido durante o evento "Semana Multi Stack", promovido pela [Treina Web](https://www.treinaweb.com.br/), o projeto conta com uma plataforma chamada E-diaristas que te ajuda a encontrar o melhor profissional de limpeza domiciliar com total segurança e praticidade. Através do Painel Administrativo, ainda é possível cadastrar novos profissionais e alterar e deletar seus dados.
 
 >Status do projeto: Em desenvolvimento.
 
@@ -33,9 +33,18 @@ As seguintes tecnologias foram utilizadas neste projeto:
 
 ## <a id="iniciando"> 🚀 Como rodar </a>
 
-> Ainda em construção...
+Para que o projeto funcione em sua máquina, você precisa ter instalado o [Node.js](https://nodejs.org/en/) e o [Python](https://www.python.org/downloads/). Também é necessário instalar o [Git](https://git-scm.com/) para clonar o repositório. 
 
-Para que o projeto funcione em sua máquina, você precisa ter instalado o [Node.js](https://nodejs.org/en/) e o [Python](https://www.python.org/downloads/). Também é necessário instalar o [Git](https://git-scm.com/) para clonar o repositório. Se já tiver feito as instalações necessárias, abra o terminal e execute as linhas de comando:
+Se já tiver feito as instalações necessárias, vamos começar clonando o repositório e abrindo a pasta na sua máquina:
+
+```
+$ git clone https://github.com/gioliveirass/multistack-ediaristas.git && cd multistack-ediaristas
+```
+
+Agora que já está com a pasta do projeto clonada e aberta no seu terminal, você pode seguir os seguintes guias para rodar a Plataforma E-Diaristas ou o Painel Administrativo:
+
+- [Rodando a plataforma E-Diaristas](#)
+- [Rodando o Painel Administrativo](#)
 
 ## <a id="licença"> 📝 Licença </a>
 
