@@ -26,4 +26,4 @@ O painel será iniciado em http://127.0.0.1:8000/web/listar_diaristas.
 
 <hr>
 
-![Voltar ao ínicio do repositório](https://img.shields.io/badge/Voltar_ao_ínicio_do_repositório-375BD2?style=for-the-badge)
+[![Voltar ao ínicio do repositório](https://img.shields.io/badge/Voltar_ao_ínicio_do_repositório-375BD2?style=for-the-badge)](https://github.com/gioliveirass/multistack-ediaristas)
