@@ -41,7 +41,7 @@ Se já tiver feito as instalações necessárias, vamos começar clonando o repo
 git clone https://github.com/gioliveirass/multistack-ediaristas.git && cd multistack-ediaristas
 ```
 
-Agora que já está com a pasta do projeto clonada e aberta no seu terminal, você pode seguir os seguintes guias para rodar a Plataforma E-diaristas ou o Painel Administrativo:
+Agora que já está com a pasta do projeto clonada e aberta no seu terminal, você pode seguir os seguintes guias para rodar a Plataforma E-diaristas e o Painel Administrativo:
 
 - [Rodando o Painel Administrativo](https://github.com/gioliveirass/multistack-ediaristas/blob/main/django/README.md): No Painel Administrativo, você irá cadastrar, editar ou excluir as informações dos profissionais de limpeza domiciliar. Uma API será gerada a partir dos dados cadastrados, portanto é necessário rodar o Painel Administrativo (e de preferência cadastrar alguns profissionais) para que a plataforma E-diaristas funcione.
 - [Rodando a plataforma E-diaristas](https://github.com/gioliveirass/multistack-ediaristas/blob/main/ediaristas/README.md): Na plataforma E-diaristas você poderá pesquisar pelos profissionais de limpeza domiciliar que foram cadastrados no Painel Administrativo e que estão mais próximos. Nessa pesquisa, você apenas precisará informar seu CEP. 
