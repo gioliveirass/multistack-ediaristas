@@ -1,6 +1,6 @@
 ## 🚀 Rodando o Painel Administrativo
 
-Antes de rodar os comandos abaixo, certifique-se de que você está com a pasta /multistack-ediaristas aberta no terminal.
+Antes de executar os comandos abaixo, certifique-se de que você está com a pasta /multistack-ediaristas aberta no terminal.
 
 ```
 # Entre na pasta /django:
