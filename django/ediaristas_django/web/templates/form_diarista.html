@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block conteudo %}
+    <!-- enctype = permite que o formulário aceite imagens  -->
+    <form method="post" enctype="multipart/form-data">
+        <!-- é necessário criar um token para o formulário (é um padrão do django)  -->
+        {% csrf_token %}
+        <!-- as_p = exibe o formulário no formato de parágrafo -->
+        {{form_diarista|crispy}}
+
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+{% endblock conteudo %}

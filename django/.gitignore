@@ -1,0 +1,4 @@
+venv/*
+ediaristas_django/media/*
+ediaristas_django/ediaristas_django/__pycache__/*
+ediaristas_django/db.sqlite3
