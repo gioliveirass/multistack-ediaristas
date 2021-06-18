@@ -15,7 +15,7 @@
 
 Desenvolvido durante o evento "Semana Multi Stack", promovido pela [Treina Web](https://www.treinaweb.com.br/), o projeto conta com uma plataforma chamada E-diaristas que te ajuda a encontrar o melhor profissional de limpeza domiciliar com total segurança e praticidade. Através do Painel Administrativo, ainda é possível cadastrar novos profissionais e alterar e deletar seus dados.
 
-Também foi desenvolvida uma aplicação mobile da plataforma E-diaristas, para saber mais sobre ela [clique aqui.](https://github.com/gioliveirass/multistack-ediaristas-mobile)
+Também foi desenvolvida uma aplicação mobile da plataforma E-diaristas, para saber mais sobre ela [clique aqui.](https://github.com/gioliveirass/multistack-ediaristas-mobile#--sobre-o-projeto-)
 
 > Status do projeto: Finalizado.
 
