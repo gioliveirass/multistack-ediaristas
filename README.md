@@ -6,6 +6,7 @@
 <p align="center">
   <a href="#projeto">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#demonstracao">Demonstração</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#iniciando">Como rodar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#licença">Licença</a>
 </p>
@@ -14,7 +15,7 @@
 
 Desenvolvido durante o evento "Semana Multi Stack", promovido pela [Treina Web](https://www.treinaweb.com.br/), o projeto conta com uma plataforma chamada E-diaristas que te ajuda a encontrar o melhor profissional de limpeza domiciliar com total segurança e praticidade. Através do Painel Administrativo, ainda é possível cadastrar novos profissionais e alterar e deletar seus dados.
 
->Status do projeto: Em desenvolvimento.
+> Status do projeto: Finalizado.
 
 ## <a id="tecnologias"> 🧪 Tecnologias </a>
 
@@ -31,9 +32,15 @@ As seguintes tecnologias foram utilizadas neste projeto:
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![JQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 
+## <a id="demonstracao"> ⚙️ Demonstração </a>
+
+Abaixo é possível vizualizar um gif que apresenta todas as telas desenvolvidas, tanto do Painel de Administração quanto da plataforma E-diaristas, bem como uma pesquisa sendo realizada.
+
+![Gif de Demonstração](.github/demonstracao.gif)
+
 ## <a id="iniciando"> 🚀 Como rodar </a>
 
-Para que o projeto funcione em sua máquina, você precisa ter instalado o [Node.js](https://nodejs.org/en/) e o [Python](https://www.python.org/downloads/). Também é necessário instalar o [Git](https://git-scm.com/) para clonar o repositório. 
+Para que o projeto funcione em sua máquina, você precisa ter instalado o [Node.js](https://nodejs.org/en/) e o [Python](https://www.python.org/downloads/). Também é necessário instalar o [Git](https://git-scm.com/) para clonar o repositório.
 
 Se já tiver feito as instalações necessárias, vamos começar clonando o repositório e abrindo a pasta na sua máquina:
 
@@ -44,7 +51,7 @@ git clone https://github.com/gioliveirass/multistack-ediaristas.git && cd multis
 Agora que já está com a pasta do projeto clonada e aberta no seu terminal, você pode seguir os seguintes guias para rodar a Plataforma E-diaristas e o Painel Administrativo:
 
 - [Rodando o Painel Administrativo](https://github.com/gioliveirass/multistack-ediaristas/blob/main/django/README.md): No Painel Administrativo, você irá cadastrar, editar ou excluir as informações dos profissionais de limpeza domiciliar. Uma API será gerada a partir dos dados cadastrados, portanto é necessário rodar o Painel Administrativo (e de preferência cadastrar alguns profissionais) para que a plataforma E-diaristas funcione.
-- [Rodando a plataforma E-diaristas](https://github.com/gioliveirass/multistack-ediaristas/blob/main/ediaristas/README.md): Na plataforma E-diaristas você poderá pesquisar pelos profissionais de limpeza domiciliar que foram cadastrados no Painel Administrativo e que estão mais próximos. Nessa pesquisa, você apenas precisará informar seu CEP. 
+- [Rodando a plataforma E-diaristas](https://github.com/gioliveirass/multistack-ediaristas/blob/main/ediaristas/README.md): Na plataforma E-diaristas você poderá pesquisar pelos profissionais de limpeza domiciliar que foram cadastrados no Painel Administrativo e que estão mais próximos. Nessa pesquisa, você apenas precisará informar seu CEP.
 
 ## <a id="licença"> 📝 Licença </a>
 
